@@ -69,5 +69,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:tianyl1984/tianyl.github.io.git
+  repo: git@github.com:tianyl1984/tianyl1984.github.io.git
   

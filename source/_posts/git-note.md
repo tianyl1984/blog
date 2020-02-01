@@ -49,6 +49,31 @@ git stash
 git config --global --list
 ```
 
+### 回滚
+
+重置 HEAD 到指定 commitid
+
+```
+git reset --hard commitid
+```
+
+--hard 丢失未 commit 的修改，重置working copy指向指定的提交记录
+
+--soft 仅仅重置 HEAD 到指定 commitid
+
+#### 未 push 到远程
+
+直接通过`git reset --hard commitid`回滚到指定提交记录，通过`git reflog`可以查看之前的提交，再通过`reset`恢复之前的操作。reflog只存在本地的记录中，重新 clone 会丢失。
+
+#### 已 push 到远程
+
+1. `git reset --hard commitid` 回滚到指定提交，并修改本地代码
+
+2. `git reset --soft origin/master` 本地代码不变，HEAD 指向远程分支，此时需要创建一个提交，因为代码没有修改。
+
+3. 正常 commit 并 push 及可。
+
+
 ### 其他
 
 
