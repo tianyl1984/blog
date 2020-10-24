@@ -31,8 +31,8 @@ country=CN
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 network={
-    ssid="TP-LINK-9DD4"
-    psk="112233abc"
+    ssid="TP-LINK-A254"
+    psk="112233abccba"
     key_mgmt=WPA-PSK
     priority=1
 }
